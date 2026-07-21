@@ -704,6 +704,10 @@ export class AgentSessionWrapper {
           const custom = this.activeCustomUis.get(id);
           if (custom) this.emitCustomUiRender(id, custom);
         },
+        terminal: {
+          columns: width,
+          rows: 999,
+        },
       };
       const finish = (value: T) => {
         if (completed) return;
